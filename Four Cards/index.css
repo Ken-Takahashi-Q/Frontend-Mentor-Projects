@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600&display=swap');
+
+* {
+    font-family: 'Outfit', sans-serif;
+}
+body {
+    font-size: 15px;
+    background-color: hsl(0, 0%, 98%);
+    align-items: center;
+    justify-items: center;
+}
+.info-1 {
+    text-align: center;
+}
+.info-1 .thin {
+    font-weight: 200;
+    padding: 0;
+}
+.info-2 {
+    font-weight: 400;
+    text-align: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    grid-column-gap: 20px;
+    max-width: 1000px;
+    position: absolute;
+}
+.grid-c2 .card {
+    margin-top: 20px;
+}
+.card-1, .card-2, .card-3, .card-4 {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    height: 200px;
+}
+.card-1 {
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+.card-2 {
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+.card-3 {
+    border-top: 4px solid hsl(34, 97%, 64%);
+    margin-top: 20px;
+}
+.card-4 {
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+.icon {
+    float: right;
+    height: 70px;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
