@@ -1,0 +1,88 @@
+* {
+    font-family: "Product Sans";
+}
+body {
+    background-color: antiquewhite;
+}
+.center {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.container {
+    display: flex;
+    width: 740px;
+    border-radius: 10px;
+    background-color: rgb(237, 251, 237);
+    justify-content: center;
+    align-items: center;
+}
+.container .img {
+    width: 370px;
+    border-radius: 10px 0 0 10px;
+}
+.info {
+    position: relative;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 40px 40px 40px 40px;
+    letter-spacing: 2px;
+}
+caption {
+    letter-spacing: 10px;
+}
+.cut-price {
+    display: flex;
+    align-items: center;
+}
+.cut-price h3 {
+    font-size: 24px;
+    color: rgb(87, 124, 87);
+    padding: 0 20px;
+}
+.cut-price p {
+    text-decoration-line: line-through;
+}
+
+.cart {
+    background-color: rgb(87, 124, 87);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart:hover{
+    background-color: rgb(26, 60, 26);
+    cursor: pointer;
+}
+.uil-shopping-cart-alt {
+    padding: 0 5px;
+}
+้h1 {
+    font-size: 24px;
+}
+h2 {
+    font-size: 16px;
+    font-weight: 200;
+}
+.attribution {
+    display: block;
+    font-size: 11px;
+    text-align: center;
+    padding: 30px;
+    bottom: 0;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
