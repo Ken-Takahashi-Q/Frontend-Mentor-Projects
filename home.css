@@ -1,0 +1,10 @@
+* {
+    font-family: "Product Sans";
+}
+body {
+    background-color: rgb(60, 60, 60);
+    color: #fff;
+}
+body a {
+    color: white;
+}
