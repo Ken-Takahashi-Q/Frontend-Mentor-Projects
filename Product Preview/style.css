@@ -6,6 +6,7 @@
     font-weight: 500;
 }
 body {
+    display: block;
     background-color: hsl(30, 38%, 92%);
     min-height: 100vh;
     display: flex;
@@ -25,14 +26,14 @@ body {
 }*/
 .container {
     display: flex;
-    width: 740px;
+    width: 800px;
     border-radius: 10px;
     background-color: rgb(237, 251, 237);
     justify-content: center;
     align-items: center;
 }
 .container .img {
-    width: 370px;
+    width: 400px;
     border-radius: 10px 0 0 10px;
 }
 .info {
@@ -94,8 +95,13 @@ h2 {
     font-size: 0.7rem;
     text-align: center;
     padding: 30px;
-    bottom: 0;
 }
-footer .attribution a {
+.attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width:500px) {
+    .alignwide {
+       width: 100% !important;
+    }
 }
