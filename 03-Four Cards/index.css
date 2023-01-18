@@ -15,11 +15,14 @@ body {
 }
 .info-1 .thin {
     font-weight: 200;
-    padding: 0;
 }
 .info-2 {
     font-weight: 400;
     text-align: center;
+    
+}
+h1 {
+    margin: 0.5rem;
 }
 .grid-container {
     display: grid;
@@ -58,18 +61,19 @@ body {
     float: right;
     height: 70px;
 }
-.footer {
-    position: relative;
+footer {
+    display: flex;
+    position: absolute;
     bottom: 0;
-    width: 500px;
-    text-align: center;
-    justify-content: center;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 .attribution {
     position: absolute;
     font-size: 11px;
     text-align: center;
-    bottom: 0;
+    justify-content: center;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
