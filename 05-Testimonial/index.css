@@ -28,13 +28,13 @@ body {
     background-image: url("images\bg-pattern-quotation.svg");
     background-color: hsl(263, 55%, 52%);
     background-repeat: no-repeat;
-
+    position: relative;
 }
 .bg {
-    position: relative;
-    height: 7em;
-    top: 20%;
-    left: 50%;
+    position: absolute;
+    height: 100px;
+    top: 0;
+    right: 20%;
     z-index: -1;
     padding: 0;
     margin: 0;
@@ -121,7 +121,6 @@ h2 {
     .item5 {
         grid-area: 5;
     }
-
     .item1, .item2, .item3, .item4, .item5 {
         max-width: 400px;
         margin-bottom: 10px;
