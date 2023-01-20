@@ -43,6 +43,7 @@ h2 {
     padding: 1em 1em 1em 1.5em;
     color: hsl(0, 0%, 59%);
     height: 60px;
+    width: 100%;
 }
 .error-message {
     display: none;
@@ -52,10 +53,10 @@ h2 {
     margin: 0;
     padding: 1em 0 0 0;
 }
-input:invalid {
+input:not(:focus):not(:placeholder-shown):invalid {
     outline: 1px solid var(--color-invalid);
 }
-input:not(:focus):invalid ~ .error-message {
+input:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
     display: block;
 }
 .notify {
@@ -68,16 +69,16 @@ input:not(:focus):invalid ~ .error-message {
     padding: 1em 1em 1em 1em;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     height: 60px;
+    width: 100%;
 }
 .notify:hover {
     background-color: hsl(223, 100%, 88%);
     cursor: pointer;
     transition: 0.2s;
 }
-
 .dashboard {
-    min-width: 50%;
-    max-width: 70%;
+    min-width: 40%;
+    max-width: 600px;
     margin-bottom: 5em;
 }
 .cc {
