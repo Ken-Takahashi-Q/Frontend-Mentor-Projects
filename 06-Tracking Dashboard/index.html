@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="index.css">
+  <link rel="import" href="data.json">
   <title>Frontend Mentor | Time tracking dashboard</title>
 
 </head>
@@ -30,7 +31,7 @@
   
     <div class="item2">
       <div class="cover">
-        <img class="icon" src="images/icon-work.svg">
+        <img class="icon" src="images/icon-work.svg" alt="icon-work">
         <br>
       </div>
       <div class="activity">
@@ -45,7 +46,7 @@
 
     <div class="item3">
       <div class="cover">
-        <img class="icon" src="images/icon-play.svg">
+        <img class="icon" src="images/icon-play.svg" alt="icon-play">
         <br>
       </div>
       <div class="activity">
@@ -60,7 +61,7 @@
 
     <div class="item4">
       <div class="cover">
-        <img class="icon" src="images/icon-study.svg">
+        <img class="icon" src="images/icon-study.svg" alt="icon-study">
         <br>
       </div>
       <div class="activity">
@@ -75,7 +76,7 @@
 
     <div class="item5">
       <div class="cover">
-        <img class="icon" src="images/icon-exercise.svg">
+        <img class="icon" src="images/icon-exercise.svg" alt="icon-exercise">
         <br>
       </div>
       <div class="activity">
@@ -90,7 +91,7 @@
 
     <div class="item6">
       <div class="cover">
-        <img class="icon" src="images/icon-social.svg">
+        <img class="icon" src="images/icon-social.svg" alt="icon-social">
         <br>
       </div>
       <div class="activity">
@@ -105,7 +106,7 @@
 
     <div class="item7">
       <div class="cover">
-        <img class="icon" src="images/icon-self-care.svg">
+        <img class="icon" src="images/icon-self-care.svg" alt="icon-self-care">
         <br>
       </div>
       <div class="activity">
@@ -118,6 +119,23 @@
       </div>
     </div>
   </div>
+
+  <div id="myDiv"></div>
+
+  <script>
+      fetch("data.json")
+          .then((res) => {
+              return res.json();
+          })
+          .then((data) => {
+              for(var i = 0; i < data.length; i++){
+                  var myDiv = document.getElementById("myDiv");
+                  myDiv.innerHTML = "<p>" + data[i].name + "</p>";
+                  mainContainer.appendChild(div);
+              }
+          });
+  </script>
+  
   <!--
   Work
   5hrs daily

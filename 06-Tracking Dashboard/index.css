@@ -87,6 +87,8 @@ p {
 .cover {
     padding: 1em;
     border-radius: 10px 10px;
+    overflow: hidden;
+    position: relative;
 }
 .activity {
     padding: 1em;
