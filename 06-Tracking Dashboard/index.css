@@ -37,8 +37,8 @@ p {
 }
 .grid-container {
     display: grid;
-    grid-template-columns: 5, 1fr;
-    grid-template-rows: 5, 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
 }
@@ -127,7 +127,7 @@ p {
     text-align: center;
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: beige;
 }
 
 /*
