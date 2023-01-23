@@ -3,6 +3,8 @@
 * {
     font-family: 'Manrope', sans-serif;
     color: var(--ligthCyan);
+    margin: 0;
+    padding: 0;
 }
 :root {
     --ligthCyan: hsl(193, 38%, 86%);
@@ -15,48 +17,56 @@
 body {
     font-size: 28px;
     background-color: var(--darkBlue);
+    min-height: 100vh;
 }
 .card {
     display: block;
     text-align: center;
-    align-items: center;
     background-color: var(--darkGrayBlue);
     border-radius: 20px;
-    max-width: 300px;
-
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 400px;
+    margin: 2rem auto 0 auto;
+    padding: 2rem;
 }
-p {
+p, #advice-number {
     font-size: 0.5em;
     color: var(--neonGreen);
+    letter-spacing: 0.3em;
+    margin-bottom: 2em;
+}
+.advice-text {
+    color:hsl(193, 38%, 86%);
 }
 .deco {
-    max-width: 300px;
+    width: 100%;
 }
-.icon {
+#dice {
     display: block;
     position: relative;
-    margin: -25px auto 10px auto;
 
+    border: none;
+    background-color: var(--neonGreen);
     height: 50px;
     width: 50px;
-    border: none;
+    margin: -25px auto 10px auto;
     border-radius: 50%;
-    background-color: var(--neonGreen);
-
+    padding: 4px 1px 0 2px;
+    cursor: pointer;
 }
-.dice {
-    position: absolute;
-    border: none;
-    background-color: transparent;
-    top: 23%;
-    left: 15%;
+#dice img {
+    height: 20px;
+    width: 20px;
+}
+#dice:hover {
+    box-shadow: 0 0 20px var(--neonGreen);
+    transition: 0.3s;
 }
 .attribution {
     font-size: 11px;
     text-align: center;
+    padding: 4em;
+    margin: 0;
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--ligthCyan);
 }
