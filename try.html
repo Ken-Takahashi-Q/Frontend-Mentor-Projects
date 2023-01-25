@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="try.css">
+</head>
+<body>
+    <div id="parent">
+        <div id="child">Click</div>
+    </div>
+
+    <div style="background-color: rgba(0,0,0,0.3)">
+        <p style="color: red">COLOR</p>
+    </div>
+
+    <div id="container">
+        <div class="item">Dog</div>
+        <div class="item active">Cat</div>
+        <div class="item">Bird</div>
+    </div>
+
+
+    <script>
+        const parent = document.getElementById('parent');
+        const child = document.getElementById('child');
+
+        parent.addEventListener('click', function(evt) {
+            console.log('foo')
+        });
+
+        child.addEventListener('click', function(evt) {
+            console.log('bar')
+        });
+    </script>
+</body>
+</html>

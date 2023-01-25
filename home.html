@@ -1,21 +1,43 @@
 <!doctype html>
 <html>
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="home.css">
-  
-  <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p><a href="01-QR Code">1-QR Code</a></p>
-    <p><a href="02-Product Preview">2-Product Preview</a></p>
-    <p><a href="03-Four Cards">3-Four Cards</a></p>
-    <p><a href="04-Coming Soon">4-Coming Soon</a></p>
-    <p><a href="05-Testimonial">5-Testimonial</a></p>
-    <p><a href="06-Tracking Dashboard">6-Tracking Dashboard</a></p>
-    <p><a href="07-Advice API">7-Advice API</a></p>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="stylesheet" href="home.css">
 
-  </body>
+	<title>This is the title of the webpage!</title>
+</head>
+	
+<body>
+	<div id="main" class="container">
+		<p><a href="01-QR Code">1-QR Code</a></p>
+		<p><a href="02-Product Preview">2-Product Preview</a></p>
+		<p><a href="03-Four Cards">3-Four Cards</a></p>
+		<p><a href="04-Coming Soon">4-Coming Soon</a></p>
+		<p><a href="05-Testimonial">5-Testimonial</a></p>
+		<p><a href="06-Tracking Dashboard">6-Tracking Dashboard</a></p>
+		<p><a href="07-Advice API">7-Advice API</a></p>
+
+		<h1 id="header">Hello</h1>
+		<input type="text" id="inp"/>
+	</div>
+
+	<div class="grandparent">
+		<div class="parent">
+			<div class="child">
+				
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		const grandparent = document.querySelector(".grandparent")
+		const parent = document.querySelector(".parent")
+		const child = document.querySelector(".child")
+
+		grandparent.addEventListener("click", e => {
+			console.log(e.target)
+		})
+	</script>
+</body>
 </html>
