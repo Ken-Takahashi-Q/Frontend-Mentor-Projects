@@ -13,7 +13,11 @@ div {
     justify-content: center;
     align-items: center;
 }
-.grandparent {
+.container {
+    display: flex;
+    flex-direction: column;
+}
+/* .grandparent {
     background-color: red;
     width: 200px;
     height: 200px;
@@ -27,4 +31,4 @@ div {
     background-color: green;
     width: 100px;
     height: 100px;
-}
+} */
