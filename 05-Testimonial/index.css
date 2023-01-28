@@ -4,9 +4,15 @@ body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: 13px;
     background-color: hsl(210, 46%, 95%);
-    min-height: 100vh;
+    
     display: grid;
     place-items: center;
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 .grid-container {
     display: grid;
@@ -91,10 +97,11 @@ h2 {
     background-color: hsl(0, 0%, 100%);
     color: black;
 }
+
 .attribution {
-    font-size: 11px;
+    font-size: 11px; 
     text-align: center;
-    margin: 10px;
+    bottom: 0;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);

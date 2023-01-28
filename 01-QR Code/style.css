@@ -50,7 +50,7 @@ p {
 }
 footer {
     align-items: center;
-    text-align: center; /* Center the text within the footer */
+    text-align: center;
 }
 .attribution {
     font-size: 11px; 
