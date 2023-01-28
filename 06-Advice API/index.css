@@ -19,6 +19,13 @@ body {
     background-color: var(--darkBlue);
     min-height: 100vh;
 }
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    align-items: center;
+    justify-content: center;
+}
 .card {
     display: block;
     text-align: center;
@@ -61,10 +68,13 @@ p, #advice-number {
     box-shadow: 0 0 20px var(--neonGreen);
     transition: 0.3s;
 }
+footer {
+    align-items: center;
+    text-align: center;
+}
 .attribution {
     font-size: 11px;
     text-align: center;
-    padding: 4em;
     margin: 0;
 }
 .attribution a {
