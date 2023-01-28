@@ -66,3 +66,28 @@ for (var S in sol) {
 }
 
 console.log('Valid for all', temp, 'tests.')
+
+
+// function solution(S) {
+//     let result = '';
+//     let count = 0;
+//     for (let i = 0; i < S.length; i++) {
+//         if (i === 0) {
+//             result += S[i];
+//             count = 1;
+//         }
+//         else {
+//             if (S[i] !== S[i-1]) {
+//                 count = 1;
+//                 result += S[i];
+//             }
+//             else {
+//                 if (count < 2) {
+//                     count++;
+//                     result += S[i];
+//                 }
+//             }
+//         }
+//     }
+//     return result
+// }

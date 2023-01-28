@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --inputBorder: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --red: hsl(0, 100%, 66%);
+    --lightGrayViolet: hsl(270, 3%, 87%);
+    --darkGrayViolet: hsl(279, 6%, 55%);
+    --veryDarkViolet: hsl(278, 68%, 11%);
+}
+body {
+    font-size: 18px;
+    min-height: 100vh;
+}
+.hidden {
+    display: none;
+}
+.container {
+    display: flex;
+    align-items: center;
+}
+.left {
+    min-height: 100vh;
+    width: 40%;
+    background-image: url(images/bg-main-desktop.png);
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+.cards {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    gap: 2rem;
+    transform: translate(-50%, -50%);
+}
+.front_card {
+    position: relative;
+    transform: translateX(-100px);
+}
+.attribution {
+    display: flex;
+    flex-direction: column;
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* @media screen and (max-width: 550px) {
+    .container {
+        margin: 0;
+        transition: 0.7s;
+    }
+} */

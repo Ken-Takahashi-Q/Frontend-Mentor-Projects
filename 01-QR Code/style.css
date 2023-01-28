@@ -6,22 +6,20 @@
 body {
     background-color: hsl(212, 45%, 89%);
 }
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+main {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
 }
 .container {
     display: flex;
-    position: relative;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 300px;
     background: #fff;
     border-radius: 20px;
-    margin-right: auto;
-    margin-left: auto;
     transition: 0.5s;
 }
 .container:hover {
@@ -32,9 +30,12 @@ body {
     display: block;
     padding: 10px;
 }
-.img-container .qr {
+.qr {
     height: 280px;
     border-radius: 10px;
+}
+.qr:hover {
+    cursor: pointer;
 }
 h1 {
     font-size: 22px;
@@ -47,8 +48,14 @@ p {
     padding: 0 20px 20px 20px;
     text-align: center;
 }
+footer {
+    align-items: center;
+    text-align: center; /* Center the text within the footer */
+}
 .attribution {
-    font-size: 11px; text-align: center;
+    font-size: 11px; 
+    text-align: center;
+    bottom: 0;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);

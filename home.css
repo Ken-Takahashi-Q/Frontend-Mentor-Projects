@@ -13,6 +13,13 @@ div {
     justify-content: center;
     align-items: center;
 }
+.profile {
+    display: flex;
+    gap: 1rem;
+}
+.github {
+    height: 30px;
+}
 .container {
     display: flex;
     flex-direction: column;
