@@ -1,5 +1,7 @@
 * {
     font-family: "Product Sans";
+    margin: 0;
+    padding: 0;
 }
 body {
     background-color: rgb(60, 60, 60);
@@ -8,21 +10,97 @@ body {
 body a {
     color: white;
 }
-div {
+main {
     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.port {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .profile {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 .github {
     height: 30px;
 }
-.container {
+.grid-container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    margin: 2rem;
+}
+.card {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(115, 141, 167);
+    border-radius: 0.7rem;
+    transition: 0.5s;
+    overflow: hidden;
+    width: 400px;
+    height: 100%;
+}
+.preview {
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 0.7rem 0.7rem 0 0;
+}
+.preview img {
+    align-items: center;
+    height: 250px;
+    width: 400px;
+    object-fit: cover;
+    transform: translate(0, -5%);
+}
+.preview2 {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 0.7rem 0.7rem 0 0;
+}
+a p {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+.cover {
+    background-color: rgb(176, 197, 188);
+    padding: 1rem;
+    transition: 1s;
+    overflow: hidden;
+    width: 400px;
+}
+.cover:hover {
+    transform: translateY(-100%);
+    overflow: none;
+    transition: 1s;
+}
+@media only screen and (max-width: 700px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    .card{
+        max-width: 400px;
+        margin-bottom: 10px;
+        justify-content: center;
+        margin: auto;
+    }
 }
 /* .grandparent {
     background-color: red;
