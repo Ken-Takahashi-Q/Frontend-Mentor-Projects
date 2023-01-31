@@ -8,6 +8,7 @@
     --intermediate: rgb(244, 171, 0);
     --hard: rgb(239, 101, 79);
     --master: rgb(159, 120, 192);
+    --pinku: #eeaeca;
 }
 body {
     background-color: rgb(60, 60, 60);
@@ -22,6 +23,13 @@ main {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
+}
+.warning {
+    background-image: linear-gradient(45deg, #eded5f 25%, #000000 25%, #000000 50%, #eded5f 50%, #eded5f 75%, #000000 75%, #000000 100%);
+    background-size: 197.99px 197.99px;
+    width: 100ch;
+    text-align: center;
+    text-shadow: 1px 1px 8px #000;
 }
 .port {
     display: flex;
@@ -47,6 +55,10 @@ main {
     padding: 1rem;
     width: 300px;
     gap: 1rem;
+}
+.difficulty {
+    display: flex;
+    gap: 0.5rem;
 }
 .dot-1, .dot-2, .dot-3, .dot-4 {
     height: 25px;
@@ -82,16 +94,15 @@ main {
     align-items: center;
     justify-content: center;
     background-color: rgb(115, 141, 167);
+    width: 400px;
+    height: 100%;
     border-radius: 0.7rem;
     transition: 0.5s;
     overflow: hidden;
-    width: 400px;
-    height: 100%;
 }
-.warning {
-    background-image: linear-gradient(45deg, #cfcf00 25%, #000000 25%, #000000 50%, #cfcf00 50%, #cfcf00 75%, #000000 75%, #000000 100%);
-    width: 800px;
-    text-align: center;
+.card:hover .overlay {
+    display: block;
+    transition: 1s;
 }
 .preview {
     width: 400px;
@@ -113,29 +124,45 @@ main {
 }
 a p {
     color: rgb(0, 0, 0);
-    text-decoration: underline;=
+    text-decoration: underline;
 }
 a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
 a:active { text-decoration: none; }
+.card a {
+    width: 100%;
+}
 .cover {
     display: flex;
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    padding: 1rem;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    background: radial-gradient(circle, #c4dce7 0%, rgba(148,187,233,1) 100%);
+    padding: 0.7rem 1rem 0.7rem 1rem;
     transition: 1s;
-    overflow: hidden;
-    width: 400px;
 }
-.cover:hover {
+/* .cover:hover {
     transform: translateY(-100%);
     overflow: none;
     transition: 1s;
-}
+} */
 .cover h4 {
     color: white;
-    padding: 0.5rem;
     border-radius: 2rem;
+}
+.overlay {
+    display: none;
+    position: relative;
+    top: -90%;
+    left: -40%;
+    margin-left: 0;
+    width: 70px;
+    height: 0;
+    transition: 1s;
+}
+.logo {
+    height: 40px;
 }
 .beginner {
     color: white;
