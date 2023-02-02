@@ -49,12 +49,22 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2rem;
     background-color: rgb(99, 131, 138);
+    border: 0;
     border-radius: 2rem;
+    margin: 1rem;
     padding: 1rem;
     width: 300px;
     gap: 1rem;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.link:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+.link h2 {
+    color: #fff;
 }
 .difficulty {
     display: flex;
@@ -101,8 +111,9 @@ main {
     overflow: hidden;
 }
 .card:hover .overlay {
-    display: block;
-    transition: 1s;
+    opacity: 1;
+    transform: translateX(160%);
+    transition: 0.3s;
 }
 .preview {
     width: 400px;
@@ -142,27 +153,27 @@ a:active { text-decoration: none; }
     padding: 0.7rem 1rem 0.7rem 1rem;
     transition: 1s;
 }
-/* .cover:hover {
-    transform: translateY(-100%);
-    overflow: none;
-    transition: 1s;
-} */
 .cover h4 {
     color: white;
     border-radius: 2rem;
 }
 .overlay {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
     position: relative;
-    top: -90%;
-    left: -40%;
-    margin-left: 0;
-    width: 70px;
-    height: 0;
-    transition: 1s;
+    justify-content: center;
+    border-radius: 10rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0.3rem;
+    gap: 0.3rem;
+    top: -60%;
+    left: -60%;
+    height: 160px;
+    transition: 0.3s;
 }
 .logo {
-    height: 40px;
+    height: 2rem;
 }
 .beginner {
     color: white;
@@ -177,6 +188,10 @@ a:active { text-decoration: none; }
     border-radius: 2rem;
 }
 @media only screen and (max-width: 700px) {
+    .profile{
+        max-width: 400px;
+        margin: 0 0 10px 0;
+    }
     .grid-container {
         grid-template-columns: 1fr;
         justify-content: center;
