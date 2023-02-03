@@ -4,32 +4,51 @@
     <link rel="stylesheet" href="try.css">
 </head>
 <body>
-    <div id="parent">
-        <div id="child">Click</div>
-    </div>
-
-    <div style="background-color: rgba(0,0,0,0.3)">
-        <p style="color: red">COLOR</p>
-    </div>
-
-    <div id="container">
-        <div class="item">Dog</div>
-        <div class="item active">Cat</div>
-        <div class="item">Bird</div>
-    </div>
-
+    <ul class="cd-gallery">
+        <li>
+              <ul class="cd-item-wrapper">
+                 <li class="selected">
+                    <img src="Home\01.jpeg" alt="Preview image">
+                 </li>
+     
+                 <li class="move-right" data-sale="true" data-price="$22">
+                    <img src="Home\01.jpeg" alt="Preview image">
+                 </li>
+     
+                 <li>
+                    <img src="Home\01.jpeg" alt="Preview image">
+                 </li>
+              </ul> <!-- cd-item-wrapper -->
+     
+           <div class="cd-item-info">
+              <b><a href="#0">Mountains</a></b>
+     
+              <em class="cd-price">$26</em>
+           </div> <!-- cd-item-info -->
+        </li>
+     
+        <!-- other list items here -->
+     </ul> <!-- cd-gallery -->
 
     <script>
-        const parent = document.getElementById('parent');
-        const child = document.getElementById('child');
-
-        parent.addEventListener('click', function(evt) {
-            console.log('foo')
-        });
-
-        child.addEventListener('click', function(evt) {
-            console.log('bar')
-        });
+        function updatePrice(container, n) {
+        //container -> each one of the $('.cd-gallery').children('li')
+        //n -> index of the selected item in the .cd-item-wrapper
+        var priceTag = container.find('.cd-price'),
+            selectedItem = container.find('.cd-item-wrapper li').eq(n);
+        if( selectedItem.data('sale') ) { 
+            // if item is on sale - cross old price and add new one
+            priceTag.addClass('on-sale');
+            var newPriceTag = ( priceTag.next('.cd-new-price').length > 0 ) ? priceTag.next('.cd-new-price') : $('<em class="cd-new-price"></em>').insertAfter(priceTag);
+            newPriceTag.text(selectedItem.data('price'));
+            setTimeout(function(){ newPriceTag.addClass('is-visible'); }, 100);
+        } else {
+            // if item is not on sale - remove cross on old price and sale price
+            priceTag.removeClass('on-sale').next('.cd-new-price').removeClass('is-visible').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+                priceTag.next('.cd-new-price').remove();
+            });
+        }
+        }
     </script>
 </body>
 </html>

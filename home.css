@@ -205,18 +205,3 @@ a:active { text-decoration: none; }
         margin: auto;
     }
 }
-/* .grandparent {
-    background-color: red;
-    width: 200px;
-    height: 200px;
-}
-.parent {
-    background-color: blue;
-    width: 150px;
-    height: 150px;
-}
-.child {
-    background-color: green;
-    width: 100px;
-    height: 100px;
-} */
