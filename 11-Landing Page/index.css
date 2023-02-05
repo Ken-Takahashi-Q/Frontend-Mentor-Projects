@@ -74,20 +74,17 @@ nav .menu {
 .img-1 {
     position: absolute;
     width: 100%;
-    height: 100vh;
     object-fit: cover;
-    clip-path: inset(10% 0px 0px 0px);
-    /* transform: translate(0, -10%); */
-    z-index: -1;
 }
 h1 {
     position: absolute;
     text-align: center;
     justify-content: center;
-    top: 20%;
+    top: 30%;
     width: 100%;
     color: white;
     font-size: 2rem;
+    font-weight: 900;
     letter-spacing: 0.7rem;
     text-transform: uppercase;
 }
@@ -96,6 +93,84 @@ h1 {
     top: 50%;
     left: 50%;
 }
+
+.grid-container-1 {
+    display: grid;
+    grid-template-columns: 1 fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.grid-1 {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: #fff;
+    padding: 5rem;
+}
+.grid-2 {
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: var(--yellow);
+}
+.grid-2 img, .grid-3 img {
+    width: 100%;
+}
+.grid-3 {
+    grid-area: 2 / 1 / 3 / 2;
+    background-color: var(--softRed);
+    padding: 5rem;
+}
+.grid-4 {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: #fff;
+}
+.grid-5 {
+    grid-area: 3 / 1 / 4 / 2;
+    background-image: url(images/desktop/image-graphic-design.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    height: 100%;
+}
+.grid-6 {
+    grid-area: 3 / 2 / 4 / 3;
+    background-image: url(images/desktop/image-photography.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    height: 100%;
+}
+.grid-1 h2, .grid-4 h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.grid-1 p, .grid-4 p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+    color: var(--darkGrayBlue);
+    margin-bottom: 2rem;
+}
+.more a {
+    text-decoration: none;
+    color: black;
+}
+.more {
+    display: inline-block;
+    height: 0.3rem;
+    width: fit-content;
+    background-color: var(--yellow);
+    border-radius: 50px;
+}
+
+
+.grid-container-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.grid-7 { grid-area: 1 / 1 / 2 / 2; }
+.grid-8 { grid-area: 1 / 2 / 2 / 3; }
+.grid-9 { grid-area: 1 / 3 / 2 / 4; }
+.grid-10 { grid-area: 1 / 4 / 2 / 5; }
+
 .attribution {
     font-size: 11px;
     text-align: center; }
