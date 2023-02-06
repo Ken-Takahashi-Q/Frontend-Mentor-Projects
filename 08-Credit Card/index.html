@@ -58,11 +58,11 @@
             <label for="card_number">Card Number</label>
             <input
               type="number"
-              oninput="if(this.value.length > this.maxlength) this.value=this.value.slice(0, this.maxlength)"
+              oninput="if (this.value.length > this.maxLength) this.value=this.value.slice(0, this.maxLength);"
               placeholder="e.g. 1234 5678 9123 0000"
               id="card_number"
-              minlength="16"
-              maxlength="16"
+              minLength="16"
+              maxLength="16"
               required />
           </div>
 
@@ -74,9 +74,9 @@
                   <input
                     type="number"
                     placeholder="MM"
-                    oninput="if(this.value.length > this.maxlength) this.value=this.value.slice(0, this.maxlength)"
-                    maxlength="2"
-                    minlength="2"
+                    oninput="if (this.value.length > this.maxLength) this.value=this.value.slice(0, this.maxLength);"
+                    maxLength="2"
+                    minLength="2"
                     id="card_month"
                     required />
                 </div>
@@ -85,9 +85,9 @@
                   <input
                     type="number"
                     placeholder="YY"
-                    oninput="if(this.value.length > this.maxlength) this.value=this.value.slice(0, this.maxlength)"
-                    maxlength="2"
-                    minlength="2"
+                    oninput="if (this.value.length > this.maxLength) this.value=this.value.slice(0, this.maxLength);"
+                    maxLength="2"
+                    minLength="2"
                     id="card_year"
                     required />
                 </div>
@@ -100,24 +100,23 @@
             <label for="card_cvc">CVC</label>
             <input
               type="number"
-              oninput="if(this.value.length > this.maxlength) this.value=this.value.slice(0, this.maxlength)"
+              oninput="if (this.value.length > this.maxLength) this.value=this.value.slice(0, this.maxLength);"
               placeholder="e.g. 123"
               id="card_cvc"
-              minlength="3"
-              maxlength="3"
+              minLength="3"
+              maxLength="3"
               required />
           </div>
 
-          <button id="submit" type="submit">Confirm</button>
+          <button id="submit_btn" type="submit">Confirm</button>
         </form>
 
         <div class="thank hidden">
           <img src="images/icon-complete.svg" alt="completed" />
           <h1>Thank you!</h1>
           <p>We've added your card details</p>
-          <button>Continue</button>
+          <button id="cont">Continue</button>
         </div>
-
         
         <div class="attribution">
           Challenge by <a href="https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw" target="_blank">Frontend Mentor</a>. 
@@ -128,111 +127,7 @@
     </div>
   </main>
 
-  <script>
-    const cardNumber = document.getElementById("number");
-    const numberInp = document.getElementById("card_number");
-
-    const cardName = document.getElementById("name");
-    const nameInp = document.getElementById("card_name");
-
-    const cardMonth = document.getElementById("month");
-    const monthInp = document.getElementById("card_month");
-
-    const cardYear = document.getElementById("year");
-    const yearInp = document.getElementById("card_year");
-
-    const cardCvc = document.getElementById("cvc");
-    const cvcInp = document.getElementById("card_cvc");
-
-    const submitBtn = document.getElementById("submit");
-
-    const completed = document.getElementById(".thank");
-    const form = document.querySelector("form");
-
-    function setCardName(e) {
-      cardName.innerText = format(e.target.value);
-    }
-
-    function setCardNumber(e) {
-      cardNumber.innerText = format(e.target.value);
-    }
-
-    function setCardMonth(e) {
-      cardMonth.innerText = format(e.target.value);
-    }
-
-    function setCardYear(e) {
-      cardYear.innerText = format(e.target.value);
-    }
-
-    function setCardCvc(e) {
-      cardCvc.innerText = format(e.target.value);
-    }
-
-    function format(s) {
-      return s.toString().replace(/\d{4}(?=.)/g, "$&");
-    }
-
-    function handleSubmit(e) {
-      e.preventDefault();
-      if (!nameInp.value) {
-        nameInp.classList.add("error");
-        nameInp.parentElement.classList.add("error message");
-      }
-      else {
-        nameInp.classList.remove("error")
-        nameInp.parentElement.classList.remove("error message");
-      }
-
-      if (!numberInp.value) {
-        numberInp.classList.add("error");
-        numberInp.parentElement.classList.add("error message");
-      }
-      else {
-        numberInp.classList.remove("error")
-        numberInp.parentElement.classList.remove("error message");
-      }
-
-      if (!monthInp.value) {
-        monthInp.classList.add("error");
-        monthInp.parentElement.classList.add("error message");
-      }
-      else {
-        monthInp.classList.remove("error")
-        monthInp.parentElement.classList.remove("error message");
-      }
-
-      if (!yearInp.value) {
-        yearInp.classList.add("error");
-        yearInp.parentElement.classList.add("error message");
-      }
-      else {
-        yearInp.classList.remove("error")
-        yearInp.parentElement.classList.remove("error message");
-      }
-
-      if (!cvcInp.value) {
-        cvcInp.classList.add("error");
-        cvcInp.parentElement.classList.add("error message");
-      }
-      else {
-        cvcInp.classList.remove("error")
-        cvcInp.parentElement.classList.remove("error message");
-      }
-
-      if (nameInp.value && numberInp.value && monthInp.value && yearInp.value && cvcInp.value) {
-        completed.classList.remove("hidden");
-        form.classList.add("hidden");
-      }
-    }
-
-    numberInp.addEventListener("keyup", setCardNumber);
-    nameInp.addEventListener("keyup", setCardName);
-    monthInp.addEventListener("keyup", setCardMonth);
-    yearInp.addEventListener("keyup", setCardYear);
-    cvcInp.addEventListener("keyup", setCardCvc);
-    submitBtn.addEventListener("click", handleSubmit);
-
-  </script>
+  <script src="https://unpkg.com/imask"></script>
+  <script src="app.js"></script>
 </body>
 </html>

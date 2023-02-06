@@ -23,11 +23,16 @@ body {
 .error {
     border: 2px solid var(--red);
 }
-.error_message {
+.error_message, .wrong_message {
     gap: 0;
 }
 .error_message::after {
     content: "can't be blank";
+    color: var(--red);
+    margin-top: 0.2rem;
+}
+.wrong_message::after {
+    content: "Wrong format, numbers only";
     color: var(--red);
     margin-top: 0.2rem;
 }
@@ -85,7 +90,7 @@ body {
 #cvc {
     position: absolute;
     right: 3.5rem;
-    top: 5.45rem;
+    top: 6.1rem;
     color: var(--lightGrayViolet);
 }
 .right {
@@ -189,7 +194,8 @@ form button {
     width: 100%;
     border-radius: 6px;
     padding: 1rem;
-    background-color: var();
+    background-color: var(--veryDarkViolet);
+    cursor: pointer;
 }
 .attribution {
     flex-direction: column;
@@ -217,6 +223,13 @@ form button {
     .card_logo {
         width: 50px;
         top: 5%;
+    }
+    .card_info {
+        position: relative;
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
     }
     #number {
         font-size: 1.1rem;
