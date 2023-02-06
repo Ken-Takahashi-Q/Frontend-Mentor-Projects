@@ -72,12 +72,12 @@ nav .menu {
     overflow: hidden;
 }
 .img-1 {
-    position: absolute;
+    position: relative;
     width: 100%;
     object-fit: cover;
 }
 h1 {
-    position: absolute;
+    position: relative;
     text-align: center;
     justify-content: center;
     top: 30%;
@@ -89,7 +89,7 @@ h1 {
     text-transform: uppercase;
 }
 .arrow {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
 }
