@@ -213,7 +213,7 @@ p {
 }
 .card:hover .overlay {
     opacity: 1;
-    transform: translate(-300%, -20%);
+    transform: translate(-200%, -20%);
     transition: 0.3s;
 } 
 .preview {
@@ -269,7 +269,7 @@ a:active { text-decoration: none; }
     background-color: rgba(255, 255, 255, 0.5);
     padding: 0.3rem;
     gap: 0.3rem;
-    transform: translate(-330%, -20%);
+    transform: translate(-250%, -20%);
     max-height: 160px;
     padding: 0.7rem 0.3rem 0.7rem 0.3rem;
     transition: 0.3s;
