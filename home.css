@@ -52,7 +52,7 @@ main {
     background-color: #484848;
     margin: 0.2rem;
     padding: 1.3rem;
-    width: 500px;
+    width: 440px;
     overflow: hidden;
 }
 h1 {
@@ -205,7 +205,7 @@ p {
     align-items: center;
     justify-content: center;
     background-color: rgb(115, 141, 167);
-    width: 400px;
+    width: 300px;
     height: 100%;
     border-radius: 0.5rem;
     transition: 0.5s;
