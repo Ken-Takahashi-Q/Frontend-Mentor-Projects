@@ -5,39 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
   
+  <link rel="stylesheet" href="index.css">
   <title>Frontend Mentor | Expenses chart component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+<main>
+	<div class="my-balance">
+		<div>
+			<p>My balance</p>
+			<h2>$921.48</h2>
+		</div>
+		<img style="height: 40px" src="images/logo.svg" alt="logo" />
+	</div>
 
-  My balance
-  $921.48
+	<div class="chart">
+		<h2>Spending - Last 7 days</h2>
+		<canvas id="myChart"></canvas>
+		<div class="summary">
+			<p>Total this month</p>
+			<div class="total">
+				<h1>$478.33</h1>
+				
+				<div class="compare">
+					<h5>+2.4%</h5>
+					<p>from last month</p>
+				</div>
+			</div>
+			
+  		</div>
 
-  Spending - Last 7 days
+	</div>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+	</main>
+  
+	<footer class="attribution">
+		Challenge by <a href="https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt" target="_blank">Frontend Mentor</a>. 
+		Coded by <a href="https://github.com/Ken-Takahashi-Q">Ken Takahashi</a>.
+	</footer>
+
+	<script src="app.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </body>
 </html>
