@@ -20,6 +20,7 @@ body a {
 main {
     display: flex;
     min-height: 100vh;
+    min-width: 50ch;
     align-items: top;
     justify-content: center;
     gap: 2rem;
@@ -27,8 +28,9 @@ main {
 }
 .warning {
     background-image: linear-gradient(45deg, #eded5f 25%, #000000 25%, #000000 50%, #eded5f 50%, #eded5f 75%, #000000 75%, #000000 100%);
-    background-size: 197.99px 197.99px;
-    width: 100%;
+    background-size: 200px 200px;
+    min-width: 50ch;
+    justify-content: center;
     text-align: center;
     text-shadow: 1px 1px 8px #000;
     margin-bottom: 1rem;
@@ -152,12 +154,17 @@ p {
     border-radius: 0.5rem;
 }
 .license {
+    display: flex;
     width: 100%;
     padding-bottom: 1rem;
+    margin-top: 0.5rem;
     border-bottom: 1px solid gray;
 }
 .license_icon {
-
+    width: 50px;
+    background-color: #fff;
+    border-radius: 0.2rem;
+    margin: 1rem 1rem 0 0;
 }
 .credential {
     font-size: 1rem;
@@ -183,6 +190,13 @@ p {
     width: 25px;
     border-radius: 50%;
     display: inline-block;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.dot-1:hover, .dot-2:hover, .dot-3:hover, .dot-4:hover {
+    border: 1px solid white;
+    transform: scale(1.4) translateY(-40%);; 
+    transition: 0.5s;
 }
 .dot-1 {
     background-color: var(--beginner);
@@ -209,16 +223,24 @@ p {
 .card {
     display: flex;
     flex-direction: column;
+    position: sticky;
     text-align: center;
     align-items: center;
     justify-content: center;
+
     background-color: rgb(115, 141, 167);
     width: 300px;
-    height: 100%;
+    height: 98%;
+    border: 1px solid rgb(209, 209, 209);
     border-radius: 0.5rem;
+    box-shadow: 0px 5px 5px rgba(255, 255, 255, 0.45);
+    position: sticky;
     transition: 0.5s;
     overflow: hidden;
 }
+.card:hover {
+    z-index: 1;
+} 
 .card:hover .overlay {
     opacity: 1;
     transform: translate(-215%, -20%);
@@ -261,7 +283,8 @@ a:active { text-decoration: none; }
     align-items: center;
     justify-content: space-between;
     background: radial-gradient(circle, #c4dce7 0%, rgba(148,187,233,1) 100%);
-    padding: 0.7rem 1rem 0.7rem 1rem;
+    padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+    gap: 0.5rem;
     height: 2rem;
     transition: 1s;
 }
@@ -288,19 +311,21 @@ a:active { text-decoration: none; }
     width: 2rem;
 }
 .logo {
-    height: 2rem;
+    height: 1.8rem;
+    width: 90%;
+}
+.beginner, .intermediate {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 2rem;
 }
 .beginner {
-    color: white;
     background-color: var(--beginner);
-    padding: 0.5rem;
-    border-radius: 2rem;
 }
 .intermediate {
-    color: white;
     background-color: var(--intermediate);
-    padding: 0.5rem;
-    border-radius: 2rem;
 }
 @media only screen and (max-width: 900px) {
     main {
