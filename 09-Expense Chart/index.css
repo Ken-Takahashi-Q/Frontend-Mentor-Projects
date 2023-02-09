@@ -68,7 +68,7 @@ main {
 .summary {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid gray;
+    border-top: 1px solid var(--cream);
     width: 100%;
     padding-top: 1.5rem;
 }
@@ -91,10 +91,15 @@ h1 {
 footer {
     position: absolute;
     bottom: 1rem;
+    font-size: 0.8rem;
+}
+footer p {
+    font-size: 0.8rem;
 }
 .attribution {
     font-size: 11px;
     text-align: center; }
 .attribution a {
     color: hsl(228, 45%, 44%);
+    font-size: 0.8rem;
 }

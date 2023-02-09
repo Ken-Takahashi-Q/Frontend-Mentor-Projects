@@ -2,27 +2,34 @@ function genChart() {
     fetch('data.json')
         .then((res) => res.json())
         .then((data) => {
+            const highestValue = Math.max(...data.map((chart) => chart.amount));
+            const bgColor = data.map((chart) => {
+                if (chart.amount === highestValue) {
+                  return "hsl(186, 34%, 60%)";
+                } else {
+                  return "hsl(10, 79%, 65%)";
+                }
+              });
+
+            const hoverBgColor = data.map((chart) => {
+            if (chart.amount === highestValue) {
+                return "hsl(186, 34%, 60%, 0.7)";
+            } else {
+                return "hsl(10, 79%, 65%, 0.7)";
+            }
+            });
+
             const info = {
                 labels: data.map((chart) => chart.day),
                 datasets: [
                     {   data: data.map((chart) => chart.amount),
                         backgroundColor: "hsl(10, 79%, 65%)",
                         borderRadius: 5,
-                        hoverBackgroundColor: "hsl(10, 79%, 65%, 0.6)",
-                        backgroundColor: function(context) {
-                            var highestValue = Math.max.apply(Math, data.amount);
-                            var indexOfHighestValue = data.indexOf(highestValue);
-
-                            var color = 'hsl(10, 79%, 65%)';
-                            if (context.dataIndex === indexOfHighestValue) {
-                                color = 'hsl(186, 34%, 60%)';
-                            }
-                            return color;
+                        hoverBackgroundColor: hoverBgColor,
+                        backgroundColor: bgColor
                         }
-                    }
                 ]
-            }
-
+            };
             const titleTooltip = (e) => `$${e[0].formattedValue}`;
             const labelTooltip = (e) => "";
 
