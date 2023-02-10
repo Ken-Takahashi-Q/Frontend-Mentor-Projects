@@ -6,15 +6,11 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="stylesheet" href="home.css">
 	<link rel="stylesheet" href="home2.css">
-
-	<title>This is the title of the webpage!</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+	<title>Portfolio</title>
 </head>
 	
 <body>
-	<div class="warning">
-		<h1>Under construction</h1>
-	</div>
-	
 	<main>
 	<div class="left_side">
 			
@@ -23,7 +19,7 @@
 				<img src="Home/20220823_205701.jpg" alt="cover">
 			</div>
 			<div class="profile">
-				<img class="profile_img" src="Home/20220823_205701.jpg" alt="profile" />
+				<img class="profile_img" src="Home/profile.jpg" alt="profile" />
 				<div class="contact">
 					<button class="link_btn" style="background-color: black;" href="https://github.com/Ken-Takahashi-Q" target="_blank">
 						<h2>GitHub</h2>
@@ -132,76 +128,78 @@
 	<div class="right_side">
 		<div class="difficulty">
 			<p>Beginner</p>
-			<span class="dot-1"></span>
-			<span class="dot-2"></span>
-			<span class="dot-3"></span>
-			<span class="dot-4"></span>
+			<button id="btn_beginner"><span class="dot-1"></span></button>
+			<button id="btn_medium"><span class="dot-2"></span></button>
+			<button id="btn_hard"><span class="dot-3"></span></button>
+			<button id="btn_master"><span class="dot-4"></span></button>
 			<p>Master</p>
 		</div>
 
 		<div class="grid-container">
-			<div class="card">
-				<div class="preview">
-					<img src="Home/01.jpeg" alt="QR Code">
-					
-				</div>
-				<a href="01-QR Code">
-					<div class="cover">
-						<p>1-QR Code</p>
-						<h4 class="beginner">Beginner</h4>
+			<div class="easy">
+				<div class="card">
+					<div class="preview">
+						<img src="Home/01.jpeg" alt="QR Code">
+						
 					</div>
-				</a>
-				<div class="overlay">
-					<img class="logo" src="Home/logo-html-2.png" alt="logo-html">
-					<img class="logo" src="Home/logo-css.png" alt="logo-css">
+					<a href="01-QR Code">
+						<div class="cover">
+							<p>1-QR Code</p>
+							<h4 class="beginner">Beginner</h4>
+						</div>
+					</a>
+					<div class="overlay">
+						<img class="logo" src="Home/logo-html-2.png" alt="logo-html">
+						<img class="logo" src="Home/logo-css.png" alt="logo-css">
+					</div>
 				</div>
-			</div>
 
-			<div class="card">
-				<div class="preview">
-					<img src="Home/02.jpeg" alt="Product Preview">
-				</div>
-				<a href="02-Product Preview">
-					<div class="cover">
-						<p>2-Product Preview</p>
-						<h4 class="beginner">Beginner</h4>
+				<div class="card">
+					<div class="preview">
+						<img src="Home/02.jpeg" alt="Product Preview">
 					</div>
-				</a>
-				<div class="overlay">
-					<img class="logo" src="Home/logo-html-2.png" alt="logo-html">
-					<img class="logo" src="Home/logo-css.png" alt="logo-css">
+					<a href="02-Product Preview">
+						<div class="cover">
+							<p>2-Product Preview</p>
+							<h4 class="beginner">Beginner</h4>
+						</div>
+					</a>
+					<div class="overlay">
+						<img class="logo" src="Home/logo-html-2.png" alt="logo-html">
+						<img class="logo" src="Home/logo-css.png" alt="logo-css">
+					</div>
 				</div>
-			</div>
 
-			<div class="card">
-				<div class="preview">
-					<img src="Home/03.jpeg" alt="Four Cards">
-				</div>
-				<a href="03-Four Cards">
-					<div class="cover">
-						<p>3-Four Cards</p>
-						<h4 class="beginner">Beginner</h4>
+				<div class="card">
+					<div class="preview">
+						<img src="Home/03.jpeg" alt="Four Cards">
 					</div>
-				</a>
-				<div class="overlay">
-					<img class="logo" src="Home/logo-html-2.png" alt="logo-html">
-					<img class="logo" src="Home/logo-css.png" alt="logo-css">
+					<a href="03-Four Cards">
+						<div class="cover">
+							<p>3-Four Cards</p>
+							<h4 class="beginner">Beginner</h4>
+						</div>
+					</a>
+					<div class="overlay">
+						<img class="logo" src="Home/logo-html-2.png" alt="logo-html">
+						<img class="logo" src="Home/logo-css.png" alt="logo-css">
+					</div>
 				</div>
-			</div>
 
-			<div class="card">
-				<div class="preview">
-					<img src="Home/04.jpeg" alt="Coming Soon">
-				</div>
-				<a href="04-Coming Soon">
-					<div class="cover">
-						<p>4-Coming Soon</p>
-						<h4 class="beginner">Beginner</h4>
+				<div class="card">
+					<div class="preview">
+						<img src="Home/04.jpeg" alt="Coming Soon">
 					</div>
-				</a>
-				<div class="overlay">
-					<img class="logo" src="Home/logo-html-2.png" alt="logo-html">
-					<img class="logo" src="Home/logo-css.png" alt="logo-css">
+					<a href="04-Coming Soon">
+						<div class="cover">
+							<p>4-Coming Soon</p>
+							<h4 class="beginner">Beginner</h4>
+						</div>
+					</a>
+					<div class="overlay">
+						<img class="logo" src="Home/logo-html-2.png" alt="logo-html">
+						<img class="logo" src="Home/logo-css.png" alt="logo-css">
+					</div>
 				</div>
 			</div>
 
@@ -295,5 +293,6 @@
 	</div>
 	</main>
 
+<script src="hone.js"></script>
 </body>
 </html>
