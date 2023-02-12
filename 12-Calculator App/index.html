@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+  <img src="images/logo.svg" alt="logo" 
+  	   style="width: 4rem; margin-bottom: 3rem;"/>
+  
+  <main>
+	<div class="left_side">
+		<p>Bill</p>
+		<div class="price">
+			<input
+				type="number"
+				name="bill"
+				class="inp"
+				id="inp_bill"
+				placeholder="0"
+				min="0"/>
+			<img class="logo" src="images/icon-dollar.svg" alt="dollar" />
+		</div>
+
+		<p>Select Tip %</p>
+		<div class="tip">
+			<button class="tip_btn" id="tip1" data-tip="0.05">5%</button>
+			<button class="tip_btn" id="tip2" data-tip="0.1">10%</button>
+			<button class="tip_btn" id="tip3" data-tip="0.15">15%</button>
+			<button class="tip_btn" id="tip4" data-tip="0.25">25%</button>
+			<button class="tip_btn" id="tip5" data-tip="0.5">50%</button>
+			<button class="tip_btn_2" id="tip6">
+				<input
+					type="number"
+					name="tip_custom"
+					id="inp_tip6"
+					placeholder="Custom"
+					min="0"/>
+			</button>
+		</div>
+
+		<div class="people_row">
+			<p>Number of People</p>
+			<p class="err">Can't be zero</p>
+		</div>
+		<div class="people">
+			<input
+				type="number"
+				name="people"
+				class="inp"
+				id="inp_people"
+				placeholder="0"
+				min="0"/>
+			<img class="logo" src="images/icon-person.svg" alt="people" />
+		</div>
+
+	</div>
+	
+	<div class="right_side">
+		<div class="amount">
+			<div class="amount_left">
+				<p>Tip Amount</p>
+				<p class="small">/ person</p>
+			</div>
+			<div class="amount_right">
+				<h2>$<h1></h1></h2>
+			</div>
+		</div>
+
+		<div class="total">
+			<div class="total_left">
+				<p>Total</p>
+				<p class="small">/ person</p>
+			</div>
+			<div class="total_right">
+				<h2>$<h1>{}</h1</h2>
+			</div>
+		</div>
+		
+		<button id="reset">Reset</button>
+	</div>
+
+  
+	</main>
+	<footer class="attribution">
+		<p>Challenge by <a href="https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX" target="_blank">Frontend Mentor</a>. 
+		Coded by <a href="#">Ken Takahashi</a>.</p>
+	</footer>
+
+</body>
+
+<script src="app.js"></script>
+</html>
