@@ -149,10 +149,12 @@ p {
     margin-top: -3.2rem;
 }
 .open_to {
+    position: relative;
     background-color: #8a8a8a;
     margin-top: 1rem;
     padding: 0.8rem;
     border-radius: 0.5rem;
+    width: 400px;
 }
 .license {
     display: flex;
@@ -188,6 +190,7 @@ p {
 }
 .difficulty button {
     background-color: transparent;
+    border: none;
 }
 .dot-1, .dot-2, .dot-3, .dot-4 {
     height: 25px;
@@ -368,4 +371,7 @@ a:active { text-decoration: none; }
         justify-content: center;
         margin: auto;
     }
+    .card:hover {
+        transform: none;
+    } 
 }
