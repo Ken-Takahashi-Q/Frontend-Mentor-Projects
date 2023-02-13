@@ -6,6 +6,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transition: 0.5s;
 }
 :root {
     --cyan: hsl(172, 67%, 45%);
@@ -39,6 +40,10 @@ h2 {
 }
 p {
     font-size: 0.8rem;
+}
+.app_logo {
+    width: 4rem;
+    margin-bottom: 3rem;
 }
 main {
     display: flex;
@@ -181,13 +186,18 @@ footer a {
 }
 
 @media screen and (max-width: 600px) {
+    .app_logo {
+        width: 4rem;
+        margin: 3rem;
+    }
     main {
         flex-direction: column;
         width: 100%;
         justify-content: center;
         align-items: center;
-        padding: 1rem;
+        padding: 1rem 1rem 5rem 1rem;
         gap: 0rem;
+        border-radius: 1rem 1rem 0 0;
     }
     .left_side {
         width: 100%;
@@ -198,5 +208,23 @@ footer a {
     }
     .right_side {
         width: 100%;
+    }
+    .tip {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5rem;
+        margin-bottom: 1rem;
+        gap: 1rem;
+    }
+    .tip_btn, .tip_btn_2 {
+        height: 2.5rem;
+    }
+    #inp_tip6 {
+        height: 100%;
+        text-align: right;
+    }
+    footer {
+        position: absolute;
+        margin-bottom: -10rem;
     }
 }
