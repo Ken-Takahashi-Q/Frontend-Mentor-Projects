@@ -203,8 +203,8 @@ footer a {
         width: 100%;
     }
     .logo {
-        position: relative;
-        left: -30%;
+        position: absolute;
+        margin-left: 1rem;
     }
     .right_side {
         width: 100%;
@@ -224,7 +224,10 @@ footer a {
         text-align: right;
     }
     footer {
-        position: absolute;
-        margin-bottom: -10rem;
+        background-color: #fff;
+        width: 100%;
+        position: relative;
+        bottom: 0%;
+        padding-bottom: 1rem;
     }
 }
