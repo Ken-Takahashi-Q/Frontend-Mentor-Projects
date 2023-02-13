@@ -1,14 +1,16 @@
 //------------Bill------------
 const bill = document.querySelector('#inp_bill');
+bill.value = '';
 
 bill.addEventListener('change', function() {
-  const billValue = parseFloat(bill.value);
+  const billValue = parseFloat(bill.value) || 0;
   console.log(`bill value: ${billValue}`);
 });
 
 //------------Buttons------------
 const tipButtons = document.querySelectorAll('.tip_btn', '.tip_btn_2');
 let selectedButton = null;
+let tipPercentage = 0;
 
 for (const button of tipButtons) {
   button.addEventListener('click', function() {
@@ -32,9 +34,9 @@ customTipButton.addEventListener('click', function() {
   console.log(`Tip Percentage: ${tipPercentage}`);
 });
 
-
 //------------People------------
 const people = document.querySelector('#inp_people');
+people.value = ''
 
 people.addEventListener('change', function() {
   const peopleValue = parseFloat(people.value);
@@ -54,20 +56,75 @@ people.addEventListener('input', function() {
   }
 });
 
+//------------Calculate------------
+const result = document.querySelector('.amount_right h1');
+const total = document.querySelector('.total_right h1');
+
+const tipResult = function() {
+  const billValue = parseFloat(bill.value) || 0;
+  const peopleValue = parseFloat(people.value) || 1;
+  const calculatedResult = (billValue * tipPercentage) / peopleValue;
+  result.innerHTML = calculatedResult.toFixed(2);
+};
+
+const totalResult = function() {
+  total.innerHTML = (parseFloat(bill.value) || 0 + (billValue * tipPercentage) / peopleValue).toFixed(2);
+}
+
+bill.addEventListener('change', tipResult);
+people.addEventListener('change', tipResult);
+
+for (const button of tipButtons) {
+  button.addEventListener('click', function() {
+  for (const btn of tipButtons) {
+    btn.classList.remove('clicked');
+  }
+  button.classList.add('clicked');
+  tipPercentage = parseFloat(button.dataset.tip);
+  console.log('Tip Percentage: ${tipPercentage}');
+  tipResult();
+  });
+}
+
+customTipButton.addEventListener('click', function() {
+  for (const btn of tipButtons) {
+    btn.classList.remove('clicked');
+  }
+  tipPercentage = parseFloat(customTipInput.value) / 100;
+  console.log('Tip Percentage: ${tipPercentage}');
+  tipResult();
+});
+
 //------------Reset------------
 const resetButton = document.querySelector('#reset');
 
 const checkResetButton = function() {
-  if (bill.value == 0 || people.value == 0) {
-    resetButton.style.backgroundColor = 'hsl(172, 67%, 45%, 0.3)';
-    resetButton.style.cursor = 'not-allowed';
-  } else {
+  if (bill.value !== '' || people.value !== '') { 
+    //clickable
     resetButton.style.backgroundColor = '';
     resetButton.style.cursor = '';
+  } else {
+    //non-clickable
+    resetButton.style.backgroundColor = 'hsl(172, 67%, 45%, 0.3)';
+    resetButton.style.cursor = 'not-allowed';
   }
 };
 
-checkResetButton();
+resetButton.addEventListener('click', function(event) {
+  if (bill.value === '' && people.value === '') {
+    event.preventDefault();
+  } else {
+    bill.value = '';
+    people.value = '';
+    customTipInput.value = '';
+    for (const button of tipButtons) {
+      button.classList.remove('clicked');
+    }
+    customTipButton.classList.remove('clicked');
+    tipResult = ''
+  }
+  checkResetButton();
+});
 
 bill.addEventListener('change', checkResetButton);
 people.addEventListener('change', checkResetButton);
