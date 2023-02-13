@@ -169,6 +169,9 @@ footer {
     bottom: 3%;
     font-size: 0.8rem;
 }
+footer a {
+    font-size: 0.8rem;
+}
 .attribution {
     font-size: 11px;
     text-align: center;

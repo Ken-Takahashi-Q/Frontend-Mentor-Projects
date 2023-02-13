@@ -12,27 +12,8 @@ const tipButtons = document.querySelectorAll('.tip_btn', '.tip_btn_2');
 let selectedButton = null;
 let tipPercentage = 0;
 
-for (const button of tipButtons) {
-  button.addEventListener('click', function() {
-    for (const btn of tipButtons) {
-      btn.classList.remove('clicked');
-    }
-    button.classList.add('clicked');
-    const tipPercentage = parseFloat(button.dataset.tip);
-    console.log(`Tip Percentage: ${tipPercentage}`);
-  });
-}
-
 const customTipButton = document.querySelector('#tip6');
 const customTipInput = document.querySelector('#inp_tip6');
-
-customTipButton.addEventListener('click', function() {
-  for (const btn of tipButtons) {
-    btn.classList.remove('clicked');
-  }
-  const tipPercentage = parseFloat(customTipInput.value) / 100;
-  console.log(`Tip Percentage: ${tipPercentage}`);
-});
 
 //------------People------------
 const people = document.querySelector('#inp_people');
@@ -63,16 +44,21 @@ const total = document.querySelector('.total_right h1');
 const tipResult = function() {
   const billValue = parseFloat(bill.value) || 0;
   const peopleValue = parseFloat(people.value) || 1;
-  const calculatedResult = (billValue * tipPercentage) / peopleValue;
-  result.innerHTML = calculatedResult.toFixed(2);
+  const calculateTip = (billValue * tipPercentage) / peopleValue;
+  result.innerHTML = calculateTip.toFixed(2);
 };
 
 const totalResult = function() {
-  total.innerHTML = (parseFloat(bill.value) || 0 + (billValue * tipPercentage) / peopleValue).toFixed(2);
+  const billValue = parseFloat(bill.value) || 0;
+  const peopleValue = parseFloat(people.value) || 1;
+  const calculateTotal = (billValue * (1+tipPercentage)) / peopleValue;
+  total.innerHTML = calculateTotal.toFixed(2);
 }
 
 bill.addEventListener('change', tipResult);
 people.addEventListener('change', tipResult);
+bill.addEventListener('change', totalResult);
+people.addEventListener('change', totalResult);
 
 for (const button of tipButtons) {
   button.addEventListener('click', function() {
@@ -83,6 +69,7 @@ for (const button of tipButtons) {
   tipPercentage = parseFloat(button.dataset.tip);
   console.log('Tip Percentage: ${tipPercentage}');
   tipResult();
+  totalResult();
   });
 }
 
@@ -93,6 +80,7 @@ customTipButton.addEventListener('click', function() {
   tipPercentage = parseFloat(customTipInput.value) / 100;
   console.log('Tip Percentage: ${tipPercentage}');
   tipResult();
+  totalResult();
 });
 
 //------------Reset------------
@@ -121,7 +109,8 @@ resetButton.addEventListener('click', function(event) {
       button.classList.remove('clicked');
     }
     customTipButton.classList.remove('clicked');
-    tipResult = ''
+    tipResult();
+    totalResult();
   }
   checkResetButton();
 });
