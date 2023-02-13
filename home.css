@@ -227,6 +227,9 @@ p {
     margin: 0 2rem 2rem 2rem;
     transition: 0.5s;
 }
+.go {
+    position: sticky;
+}
 .card {
     display: flex;
     flex-direction: column;
@@ -290,6 +293,7 @@ a:active { text-decoration: none; }
     position: relative;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
     background: radial-gradient(circle, #c4dce7 0%, rgba(148,187,233,1) 100%);
     padding: 0.7rem 0.5rem 0.7rem 0.5rem;
     gap: 0.5rem;
@@ -322,7 +326,7 @@ a:active { text-decoration: none; }
     height: 1.8rem;
     width: 90%;
 }
-.beginner, .intermediate {
+.beginner, .intermediate, .hard {
     font-size: 0.8rem;
     font-weight: 500;
     color: white;
@@ -334,6 +338,9 @@ a:active { text-decoration: none; }
 }
 .intermediate {
     background-color: var(--intermediate);
+}
+.hard {
+    background-color: var(--hard);
 }
 @media only screen and (max-width: 900px) {
     main {
