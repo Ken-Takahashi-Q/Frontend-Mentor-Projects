@@ -83,6 +83,9 @@ p {
     font-weight: 400;
     color: #dbdbdb;
 }
+.tab {
+    tab-size: 4;
+}
 .profile_cover {
     display: block;
     position: relative;
@@ -360,6 +363,7 @@ a:active { text-decoration: none; }
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
     .difficulty {
         margin: 3rem 0 0 0;
@@ -381,5 +385,10 @@ a:active { text-decoration: none; }
     }
     .card:hover {
         transform: none;
+    } 
+    .card:hover .overlay {
+        opacity: 1;
+        transform: translate(-230%, -20%);
+        transition: 0.3s;
     } 
 }
