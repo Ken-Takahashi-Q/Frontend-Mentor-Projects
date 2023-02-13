@@ -27,7 +27,7 @@ body {
     min-height: 100vh;
     font-size: 24px;
     font-family: 'Space Mono', monospace;
-    background-color: var(--grayCyan);
+    background-color: var(--lightGrayCyan);
     border: none;
 }
 h1 {

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parallax Scrolling Website | Vanilla JS</title>
+        <link rel="stylesheet" type="text/css" href="style_parallax.css">
+    </head>
+
+    <body>
+        <header>
+            <a href="#" class="logo">Logo</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+
+        <section>
+            <img src="images/stars.png" id="stars">
+            <img src="images/moon.png" id="moon">
+            <img src="images/mountains_b.png" id="mountains_b">
+            <h2 id="text">Moonlight</h2>
+            <a href="#" id="btn">Explore</a>
+            <img src="images/mountains_f.png" id="mountains_f">
+        </section>
+
+        <div class="sec" id="sec">
+            <h2>Parallax Scrolling Effects</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae fugit obcaecati dolores nulla quaerat similique, temporibus quae perspiciatis inventore odio beatae illum, omnis dolore praesentium molestiae et odit. Laboriosam, sed! <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam laboriosam a veritatis ex libero impedit velit reiciendis qui quisquam? Consequuntur quam repellat reprehenderit iure facilis velit aut in itaque laborum. <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, deleniti! Aperiam, ab enim maiores magni, tenetur dolores non quos, voluptatibus soluta nemo temporibus? Aut, sit autem. Ipsa natus ad nesciunt? <br><br>
+            </p>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_b = document.getElementById('mountains_b');
+            let mountains_f = document.getElementById('mountains_f');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function() {
+                let value = window.scrollY;
+                stars.style.left = value*0.25 + 'px';
+                moon.style.top = value*1.05 + 'px';
+                mountains_b.style.top = value*0.5 + 'px';
+                mountains_f.style.top = value*0 + 'px';
+                text.style.marginRight = value*4 + 'px';
+                text.style.marginTop = value*1.5 + 'px';
+                btn.style.marginTop = value*1.5 + 'px';
+                header.style.marginTop = value*0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
