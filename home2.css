@@ -1,33 +1,49 @@
-.card:nth-child(1n) {
+.go:nth-child(1n) {
   top: 20px;
 }
 
-.card:nth-child(2n) {
+.go:nth-child(2n) {
   top: 40px;
 }
 
-.card:nth-child(3n) {
+.go:nth-child(3n) {
   top: 60px;
 }
 
-.card:nth-child(4n) {
+.go:nth-child(4n) {
   top: 80px;
 }
 
-.card:nth-child(5n) {
+.go:nth-child(5n) {
   top: 100px;
 }
 
-.card:nth-child(6n) {
+.go:nth-child(6n) {
   top: 120px;
 }
 
-.card:nth-child(7n) {
+.go:nth-child(7n) {
   top: 140px;
 }
 
-.card:nth-child(8n) {
+.go:nth-child(8n) {
   top: 160px;
+}
+
+.go:nth-child(9n) {
+  top: 180px;
+}
+
+.go:nth-child(10n) {
+  top: 200px;
+}
+
+.go:nth-child(11n) {
+  top: 220px;
+}
+
+.go:nth-child(12n) {
+  top: 240px;
 }
 
 /*# sourceMappingURL=home2.css.map */
