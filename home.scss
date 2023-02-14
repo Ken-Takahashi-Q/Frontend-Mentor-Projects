@@ -1,4 +1,4 @@
-@for $i from 1 through 12 {
+@for $i from 1 through 13 {
     .go:nth-child(#{$i}n) {
       top: $i * 20px;
     }

@@ -46,4 +46,8 @@
   top: 240px;
 }
 
+.go:nth-child(13n) {
+  top: 260px;
+}
+
 /*# sourceMappingURL=home2.css.map */
