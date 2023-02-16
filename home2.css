@@ -50,4 +50,10 @@
   top: 260px;
 }
 
+@media (max-width: 700px) {
+  .go:nth-child {
+    top: 0;
+  }
+}
+
 /*# sourceMappingURL=home2.css.map */

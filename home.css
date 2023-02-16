@@ -20,7 +20,6 @@ body a {
 main {
     display: flex;
     min-height: 100vh;
-    min-width: 50ch;
     align-items: top;
     justify-content: center;
     gap: 2rem;
@@ -232,7 +231,7 @@ p {
 }
 .go {
     position: sticky;
-    top: 10px;
+    top: 1rem;
 }
 .card, .card-test {
     display: flex;
@@ -374,22 +373,25 @@ a:active { text-decoration: none; }
 }
 @media only screen and (max-width: 700px) {
     main {
-        display: block;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        min-width: 100%;
     }
     .left_side, .right_side {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100%;
+    }
+    .section {
     }
     .difficulty {
         margin: 3rem 0 0 0;
     }
     .grid-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         transition: 0.5s;
     }
 
@@ -411,4 +413,51 @@ a:active { text-decoration: none; }
         transform: translate(-230%, -20%);
         transition: 0.3s;
     } 
+}
+
+.lower {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.image-gallery {
+    position: relative;
+    width: 600px;
+    margin: 0 auto;
+}
+  
+.images {
+    display: flex;
+    overflow: hidden;
+    height: 400px;
+    width: 100%;
+}
+  
+.images img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: none;
+}
+  
+.images img:first-child {
+    display: block;
+}
+  
+.next-button, .previous-button {
+    position: absolute;
+    top: 50%;
+
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.previous-button {
+    left: 2rem;
+}
+.next-button {
+    right: 2rem;
 }

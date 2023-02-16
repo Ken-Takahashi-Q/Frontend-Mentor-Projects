@@ -1,5 +1,11 @@
 @for $i from 1 through 13 {
     .go:nth-child(#{$i}n) {
-      top: $i * 20px;
+		top: $i * 20px;
     }
-  }
+}
+
+@media (max-width: 700px) {
+    .go:nth-child {
+        top: 0;
+    }
+}
