@@ -91,9 +91,16 @@ h1, h2, h3, h4, p {
 .profile_cover {
     display: block;
     position: relative;
-    transform: translate(-5%, -20%);
+    transform: translate(-7%, -20%);
     height: 200px;
-    width: 115%;
+    width: 125%;
+
+    background-image: url("Home/20220823_205701.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 40%;
+    
+    height: 250px;
     overflow: hidden;
     margin: 0;
 }
