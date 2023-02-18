@@ -62,15 +62,16 @@ people.addEventListener('change', totalResult);
 
 for (const button of tipButtons) {
   button.addEventListener('click', function() {
-  for (const btn of tipButtons) {
-    btn.classList.remove('clicked');
-  }
-  button.classList.add('clicked');
-  tipPercentage = parseFloat(button.dataset.tip);
-  console.log('Tip Percentage: ${tipPercentage}');
-  tipResult();
-  totalResult();
-  });
+    for (const btn of tipButtons) {
+      btn.classList.remove('clicked');
+    }
+    button.classList.add('clicked');
+    tipPercentage = parseFloat(button.dataset.tip);
+    console.log('Tip Percentage: ${tipPercentage}');
+    tipResult();
+    totalResult();
+    }
+  );
 }
 
 customTipButton.addEventListener('click', function() {
