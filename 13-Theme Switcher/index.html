@@ -10,9 +10,12 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="index.css">
 
-	<title>Frontend Mentor | [Challenge Name Here]</title>
+	<title>Theme Switcher</title>
 </head>
 <body>
+	<div class="warning">
+		<h2>Under Construction</h2>
+	</div>
 	<div class="bgpattern">
 	</div>
 
@@ -23,12 +26,11 @@
 				<p>Total Followers: 23,004</p>
 			</div>
 			<div class="theme">
-				<p>Dark Mode</p>
-				<div class="toggle-switch">
-					<input type="checkbox" id="toggle" class="toggle-checkbox">
-					<label for="toggle" class="toggle-label"></label>
-					<div class="toggle-handle"></div>
-				</div>
+				<label for="dark_mode" title="Dark mode toggle" class="toggle__label">Dark Mode</label>
+				<div class="toggle__button-wrapper">
+					<input type="checkbox" name="dark_mode" class="toggle__checkbox" id="dark_mode">
+					<span class="toggle__button"></span>
+				</div>						
 			</div>
 		</div>
 
@@ -97,7 +99,7 @@
 
 	<div class="section">
 	<div class="overview">
-		<h3>Overview - Today</h3>
+		<h3 style="margin: 1rem 0 1.8rem 0;">Overview - Today</h3>
 	</div>
 	<div class="grid-bottom">
 		<div class="card-2">
@@ -213,5 +215,14 @@
 		<p>Challenge by <a href="https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H/hub" target="_blank">Frontend Mentor</a>. 
 		Coded by <a href="https://github.com/Ken-Takahashi-Q">Ken Takahashi</a>.</p>
 	</footer>
+
+	<script>
+		const toggleButton = document.getElementById('dark_mode');
+    	const body = document.getElementsByTagName("body")[0];
+
+		toggleButton.addEventListener('click', () => {
+			body.classList.toggle('light');
+		});
+	</script>
 </body>
 </html>
