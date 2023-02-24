@@ -10,6 +10,9 @@
     --master: rgb(159, 120, 192);
     --pinku: #eeaeca;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: rgb(39, 39, 39);
     color: #fff;
@@ -371,6 +374,7 @@ a:active { text-decoration: none; }
     padding: 0.5rem 0 0.5rem 0;
     border-radius: 2rem;
     width: 8rem;
+    height: 100%;
 }
 .beginner {
     background-color: var(--beginner);
