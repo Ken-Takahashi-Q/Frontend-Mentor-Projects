@@ -160,8 +160,8 @@ h1, h2, h3, h4, p {
 .link_btn h2 {
     color: #fff;
 }
-#a_profile_img:hover ~ .contact #linkedin {
-    padding-left: 8rem;
+#a_profile_img:hover + .contact #linkedin {
+    text-indent: 8rem;
     transform: translateX(-50%);
     transition: 1s;
 }
