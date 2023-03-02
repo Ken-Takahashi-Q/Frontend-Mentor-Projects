@@ -15,7 +15,6 @@ body{
 .container{
     position: relative;
     width: 400px;
-    height: 105px;
     background: white;
     padding: 28px 32px;
     overflow: hidden;
@@ -99,15 +98,19 @@ body{
     display: flex;
     align-items: center;
     width: 50%;
-    height: 100px;
+    padding: 1rem;
+}
+.humidity:hover, .wind:hover{
+    background-color: #eaeaea;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 .weather-details .humidity{
     padding-left: 20px;
-    justify-content: flex-start;
 }
 .weather-details .wind{
     padding-right: 20px;
-    justify-content: flex-end;
 }
 .weather-details i{
     color: #06283D;

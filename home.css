@@ -22,6 +22,8 @@ body a {
 }
 main {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     min-height: 100vh;
     align-items: top;
     justify-content: center;
@@ -38,6 +40,11 @@ main {
     text-shadow: 1px 1px 8px #000;
     margin-bottom: 1rem;
 } */
+.upper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
 .left_side {
     display: flex;
     flex-direction: column;
@@ -259,7 +266,6 @@ h1, h2, h3, h4, p {
 .card, .card-test {
     display: flex;
     flex-direction: column;
-    
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -272,6 +278,10 @@ h1, h2, h3, h4, p {
     transition: transform 1s ease-in-out 0.5s;
     overflow: hidden;
 }
+.card.show {
+    display: flex;
+}
+
 /* For using background image */
 .card-test {
     position: relative;
@@ -399,8 +409,11 @@ a:active { text-decoration: none; }
         margin-top: 0;
         width: 100%;
     }
+    .upper{
+        flex-direction: column;
+        align-items: center;
+    }
     .left_side, .right_side {
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
